@@ -12,10 +12,11 @@ public class UserRepoImplementation implements UserRepo {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    //Spring uses Hash Property of Redis to work with
+    //Spring uses Hash Property of Redis to work.
     private static final String KEY = "User";
 
 
+    // opsForHash Not only deserializes the object but also searches for specific Item. ( if we are looking for it )
     @Override
     public boolean saveUser(UserEntity userEntity) {
         try{
